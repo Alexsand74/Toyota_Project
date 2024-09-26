@@ -1,7 +1,7 @@
 package cars;
 
 import car_detail.*;
-import enums.CarType;
+import enums.CarTypePrice;
 import enums.Country;
 import enums.GearboxType;
 import exception.StartCarException;
@@ -24,11 +24,11 @@ public abstract class Car {
     protected Headlights headlights;
     protected BigDecimal priceCents;
     protected Country country;
-    protected CarType carType;
+    protected CarTypePrice carTypePrice;
 
     public Car(String color, int maximumSpeed, GearboxType gearboxType, boolean stateOfMotion,
                Wheel wheel, FuelTank fuelTank, Engine engine, Electrics electrics,
-               Headlights headlights, BigDecimal priceCents, Country country, CarType carType) {
+               Headlights headlights, BigDecimal priceCents, Country country, CarTypePrice carTypePrice) {
 
         this.color = color;
         this.maximumSpeed = maximumSpeed;
@@ -44,7 +44,7 @@ public abstract class Car {
         this.headlights = headlights;
         this.priceCents = priceCents;
         this.country = country;
-        this.carType = carType;
+        this.carTypePrice = carTypePrice;
     }
 
     public void setFuelTank(int fuelTank) {
@@ -89,8 +89,8 @@ public abstract class Car {
         System.out.println("Объект от класса " + this + " включил свет ");
     }
 
-    public CarType getCarType() {
-        return carType;
+    public CarTypePrice getCarType() {
+        return carTypePrice;
     }
 
     public BigDecimal getPriceCents() {

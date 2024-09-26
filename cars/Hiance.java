@@ -1,12 +1,11 @@
 package cars;
 
 import car_detail.*;
-import enums.CarType;
 import enums.Country;
 import enums.GearboxType;
 import enums.CarBrandWheelDiameter;
 import java.math.BigDecimal;
-import static enums.CarType.HIANCE;
+import static enums.CarTypePrice.HIANCE;
 
 public class Hiance extends Trucks {
     private Wheel spare = new Wheel(false, CarBrandWheelDiameter.TRUCK.getDiameter());

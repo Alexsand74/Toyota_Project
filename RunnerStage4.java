@@ -1,6 +1,6 @@
 import buyer.Buyer;
 import cars.*;
-import enums.CarType;
+import enums.CarTypePrice;
 import enums.Country;
 import exception.CountyFactoryNotEqualException;
 import exception.NotEnoughMoneyException;
@@ -56,10 +56,10 @@ public class RunnerStage4 {
             Factory factoryJapan = new Factory(Country.JAPAN);
             Conveyor conveyorJapan = new Conveyor(Country.JAPAN, factoryJapan);
 
-            Camry camry = conveyorJapan.createCamry("black", CarType.CAMRY.getPrice());
-            Solara solara = conveyorJapan.createSolara("white", CarType.SOLARA.getPrice());
-            Hiance hiance = conveyorJapan.createHiance("black", CarType.HIANCE.getPrice());
-            Dyna dyna = conveyorJapan.createDyna("black", CarType.DYNA.getPrice());
+            Camry camry = conveyorJapan.createCamry("black", CarTypePrice.CAMRY.getPrice());
+            Solara solara = conveyorJapan.createSolara("white", CarTypePrice.SOLARA.getPrice());
+            Hiance hiance = conveyorJapan.createHiance("black", CarTypePrice.HIANCE.getPrice());
+            Dyna dyna = conveyorJapan.createDyna("black", CarTypePrice.DYNA.getPrice());
 
             Garage garage = new Garage();
             System.out.println("________________________________________");
@@ -104,9 +104,9 @@ public class RunnerStage4 {
 
     private static void showNumberCar(Garage garage) {
         garage.numberCarsRemaining();
-        garage.numberCarRemaining(CarType.CAMRY);
-        garage.numberCarRemaining(CarType.SOLARA);
-        garage.numberCarRemaining(CarType.DYNA);
-        garage.numberCarRemaining(CarType.HIANCE);
+        garage.numberCarRemaining(CarTypePrice.CAMRY);
+        garage.numberCarRemaining(CarTypePrice.SOLARA);
+        garage.numberCarRemaining(CarTypePrice.DYNA);
+        garage.numberCarRemaining(CarTypePrice.HIANCE);
     }
 }

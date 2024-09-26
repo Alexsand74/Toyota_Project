@@ -1,11 +1,10 @@
 package cars;
 
 import car_detail.*;
-import enums.CarType;
 import enums.Country;
 import enums.GearboxType;
 import java.math.BigDecimal;
-import static enums.CarType.SOLARA;
+import static enums.CarTypePrice.SOLARA;
 
 public class Solara extends Car {
     private boolean roof;  // крыша поднята  = true

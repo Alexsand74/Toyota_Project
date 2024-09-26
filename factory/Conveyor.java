@@ -1,7 +1,7 @@
 package factory;
 
 import cars.*;
-import enums.CarType;
+import enums.CarTypePrice;
 import enums.Country;
 import enums.GearboxType;
 import enums.CarBrandWheelDiameter;
@@ -56,12 +56,12 @@ public class Conveyor {
                 BigDecimal.valueOf(price), 4_000, country);
     }
 
-    public Car createCar(String color, double price, CarType type) {
-        if (type == CarType.HIANCE) {
+    public Car createCar(String color, double price, CarTypePrice type) {
+        if (type == CarTypePrice.HIANCE) {
             return createHiance(color, price);
-        } else if (type == CarType.CAMRY) {
+        } else if (type == CarTypePrice.CAMRY) {
             return createCamry(color,price);
-        } else if (type == CarType.SOLARA) {
+        } else if (type == CarTypePrice.SOLARA) {
             return createSolara(color, price);
         }
         return createDyna(color, price);

@@ -1,13 +1,13 @@
 package garage;
 
 import cars.*;
-import enums.CarType;
+import enums.CarTypePrice;
 import exception.IllegalArgumentCarException;
 
 import java.util.*;
 
 public class Garage {
-    private Map<CarType, HashSet<Car>> garageMap = new HashMap<>();
+    private Map<CarTypePrice, HashSet<Car>> garageMap = new HashMap<>();
     private static final int FULL_GARAGE = 1000;
     private static int carsCounter = 0;
 
@@ -31,7 +31,7 @@ public class Garage {
 
     public void getCarCarage(Car car) throws IllegalArgumentCarException {
         if (car == null) {
-            throw new NullPointerException("Car = null !");
+            return;
         }
         if (checkGarageCars()) {
             throw new IllegalArgumentCarException();
@@ -59,13 +59,13 @@ public class Garage {
         System.out.println("Всего на складе осталось - " + getCarsCounter() + " автомобилей.");
     }
 
-    public int numberCarRemaining(CarType carType) {
-        HashSet<Car> carSet = garageMap.get(carType);
+    public int numberCarRemaining(CarTypePrice carTypePrice) {
+        HashSet<Car> carSet = garageMap.get(carTypePrice);
         int result = 0;
         if (carSet != null) {
             result = carSet.size();
         }
-        System.out.printf("Автомобилей марки %s на складе осталось - % d  \n", carType, result);
+        System.out.printf("Автомобилей марки %s на складе осталось - % d  \n", carTypePrice, result);
         return result;
     }
 

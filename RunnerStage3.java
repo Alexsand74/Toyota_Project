@@ -1,9 +1,8 @@
 import cars.*;
-import enums.CarType;
+import enums.CarTypePrice;
 import enums.Country;
 import factory.Conveyor;
 import factory.Factory;
-import exception.IllegalArgumentCarException;
 import exception.CountyFactoryNotEqualException;
 import garage.Garage;
 
@@ -78,9 +77,9 @@ public class RunnerStage3 {
 
     private static void showNumberCar(Garage garage) {
         garage.numberCarsRemaining();
-        garage.numberCarRemaining(CarType.CAMRY);
-        garage.numberCarRemaining(CarType.SOLARA);
-        garage.numberCarRemaining(CarType.DYNA);
-        garage.numberCarRemaining(CarType.HIANCE);
+        garage.numberCarRemaining(CarTypePrice.CAMRY);
+        garage.numberCarRemaining(CarTypePrice.SOLARA);
+        garage.numberCarRemaining(CarTypePrice.DYNA);
+        garage.numberCarRemaining(CarTypePrice.HIANCE);
     }
 }

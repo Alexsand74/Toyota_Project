@@ -2,12 +2,12 @@ package enums;
 
 import java.math.BigDecimal;
 
-public enum CarType {
+public enum CarTypePrice {
     CAMRY(10000), SOLARA(12000), HIANCE(15000), DYNA(22000);
 
     private BigDecimal price;
 
-    CarType(int price) {
+    CarTypePrice(int price) {
         this.price = BigDecimal.valueOf(price);
     }
 

@@ -4,7 +4,7 @@ import car_detail.*;
 import enums.Country;
 import enums.GearboxType;
 import java.math.BigDecimal;
-import static enums.CarType.DYNA;
+import static enums.CarTypePrice.DYNA;
 
 public class Dyna extends Trucks {
 

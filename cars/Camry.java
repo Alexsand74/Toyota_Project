@@ -4,7 +4,7 @@ import car_detail.*;
 import enums.Country;
 import enums.GearboxType;
 import java.math.BigDecimal;
-import static enums.CarType.CAMRY;
+import static enums.CarTypePrice.CAMRY;
 
 public class Camry extends Car {
 //    Для camry легковых авто характерно наличие круиз контроля, и возможности включить или выключить его.

@@ -1,7 +1,7 @@
 package cars;
 
 import car_detail.*;
-import enums.CarType;
+import enums.CarTypePrice;
 import enums.Country;
 import enums.GearboxType;
 import java.math.BigDecimal;
@@ -11,10 +11,10 @@ public abstract class Trucks extends Car {
 
     public Trucks(String color, int maximumSpeed, GearboxType gearboxType, boolean stateOfMotion,
                   Wheel wheel, FuelTank fuelTank, Engine engine, Electrics electrics, Headlights headlights,
-                  BigDecimal price, int loadCapacity, Country country, CarType carType) {
+                  BigDecimal price, int loadCapacity, Country country, CarTypePrice carTypePrice) {
 
         super(color, maximumSpeed, gearboxType, stateOfMotion, wheel,
-                fuelTank, engine, electrics, headlights, price, country, carType);
+                fuelTank, engine, electrics, headlights, price, country, carTypePrice);
 
         this.loadCapacity = loadCapacity;
     }
