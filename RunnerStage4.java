@@ -80,12 +80,10 @@ public class RunnerStage4 {
 
             List list = List.of(10000, 12000, 15000, 22000, 11000, 13200, 8000, 30000);
             ArrayList<Integer> amountMoneyBuyers = new ArrayList<>(list);
-//            amountMoneyBuyers.addAll(list);
             int counter = 1;
-            for (int i = 0; i < amountMoneyBuyers.size(); i++) {
-
+            for (Integer amountMoneyBuyer : amountMoneyBuyers) {
                 String currentNameBuyer = "Покупатель" + counter;
-                double currentHasSumMoney = (double) amountMoneyBuyers.get(i);
+                double currentHasSumMoney = (double) amountMoneyBuyer;
                 Buyer currentBuyer = new Buyer(currentNameBuyer, currentHasSumMoney);
                 System.out.printf("Покупатель %d ", counter);
                 try {
@@ -99,7 +97,6 @@ public class RunnerStage4 {
                 System.out.println("Тотальная сумма прибыли = " + cashier.getIncomeTotal());
                 counter++;
             }
-
         } catch (CountyFactoryNotEqualException e) {
             System.out.println(e.getMessage());
         }
