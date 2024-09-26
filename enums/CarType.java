@@ -3,7 +3,7 @@ package enums;
 import java.math.BigDecimal;
 
 public enum CarType {
-    CAMRY(10000), SOLARA(12000), DYNA(15000), HIANCE(22000);
+    CAMRY(10000), SOLARA(12000), HIANCE(15000), DYNA(22000);
 
     private BigDecimal price;
 

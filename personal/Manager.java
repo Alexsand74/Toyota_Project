@@ -46,7 +46,7 @@ public class Manager {
             car = garage.getAllCars().stream()
                     .sorted((a1, a2) -> a1.getPriceCents().compareTo(a2.getPriceCents()))
                     .filter((auto) -> auto.getPriceCents()
-                                          .compareTo(buyer.getHasSumMoneyBigDecimal()) < COMPARISON_WITH_ZERO)
+                                          .compareTo(buyer.getHasSumMoneyBigDecimal()) <= COMPARISON_WITH_ZERO)
                     .reduce((e1, e2) -> e2)
                     .orElse(null);
         } else {
@@ -67,7 +67,7 @@ public class Manager {
                 .filter((type) -> type.getPriceInBigDecimal()
                         .add(type.getPriceInBigDecimal()
                                  .divide(BigDecimal.TEN))
-                        .compareTo(buyer.getHasSumMoneyBigDecimal()) < COMPARISON_WITH_ZERO)
+                        .compareTo(buyer.getHasSumMoneyBigDecimal()) <= COMPARISON_WITH_ZERO)
                 .reduce((e1, e2) -> e2)
                 .orElseThrow(() -> new NotEnoughMoneyException());
 
